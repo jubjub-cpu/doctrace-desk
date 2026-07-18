@@ -101,6 +101,13 @@ $env:PLAYWRIGHT_MODULE = (Resolve-Path .\node_modules\playwright\index.mjs)
 node .\tests\browser-smoke.mjs
 ```
 
+Run the same checks against the deployed release:
+
+```powershell
+$env:DOCUTRACE_BASE_URL = 'https://jubjub-cpu.github.io/doctrace-desk/'
+node .\tests\browser-smoke.mjs
+```
+
 The validation checks required files, JSON fixtures, synthetic-data notices, disclosures, accessible HTML hooks, private-information patterns, common secret patterns, retrieval, extraction, version comparison, risk flags, and exported evidence. The optional browser suite covers both packets, keyboard entry, download, error states, desktop and mobile approval, and responsive overflow.
 
 See [validation evidence](docs/VALIDATION.md) for the exact release checks and results.

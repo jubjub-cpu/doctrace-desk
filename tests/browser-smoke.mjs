@@ -4,14 +4,15 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = new URL("../", import.meta.url);
 const port = Number(process.env.DOCUTRACE_TEST_PORT || 4184);
-const baseUrl = `http://127.0.0.1:${port}/`;
+const deployedBaseUrl = process.env.DOCUTRACE_BASE_URL?.trim();
+const baseUrl = deployedBaseUrl ? `${deployedBaseUrl.replace(/\/$/, "")}/` : `http://127.0.0.1:${port}/`;
 const moduleTarget = process.env.PLAYWRIGHT_MODULE || "playwright";
 const moduleSpecifier = /^[A-Za-z]:[\\/]/.test(moduleTarget) ? pathToFileURL(moduleTarget).href : moduleTarget;
 const { chromium } = await import(moduleSpecifier);
 const desktopScreenshotPath = fileURLToPath(new URL("../docs/screenshots/doctrace-approved-workflow.png", import.meta.url));
 const mobileScreenshotPath = fileURLToPath(new URL("../docs/screenshots/doctrace-mobile-workflow.png", import.meta.url));
 
-const server = spawn(process.execPath, ["tools/static-server.mjs", "--port", String(port)], {
+const server = deployedBaseUrl ? null : spawn(process.execPath, ["tools/static-server.mjs", "--port", String(port)], {
   cwd: root,
   stdio: ["ignore", "pipe", "pipe"]
 });
@@ -103,7 +104,7 @@ try {
   assert.ok(inputHeight < 80, `Mobile question field should remain compact; received ${inputHeight}px`);
   await completeReview(mobilePage);
   assert.equal(await mobilePage.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false, "Mobile should not overflow horizontally");
-  await mobilePage.screenshot({ path: mobileScreenshotPath, clip: { x: 0, y: 0, width: 390, height: 760 } });
+  await mobilePage.screenshot({ path: mobileScreenshotPath, fullPage: true });
   await mobile.close();
 
   const errorContext = await browser.newContext({ viewport: { width: 900, height: 700 } });
@@ -121,9 +122,10 @@ try {
     secondPacket: "returned for clarification",
     states: ["loading", "validation", "no evidence", "load error", "approved", "returned"],
     consoleErrors: 0,
-    failedRequests: 0
+    failedRequests: 0,
+    target: deployedBaseUrl ? "deployed" : "local"
   }));
 } finally {
   if (browser) await browser.close();
-  server.kill();
+  if (server) server.kill();
 }
