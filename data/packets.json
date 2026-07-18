@@ -1,0 +1,120 @@
+{
+  "demoNotice": "All organizations, people, terms, and events in these packets are fictional and synthetic.",
+  "packets": [
+    {
+      "id": "northstar-renewal",
+      "title": "Northstar renewal review",
+      "reference": "PROC-2026-014",
+      "owner": "Procurement operations",
+      "summary": "Facilities support agreement, 2026 amendment, and internal handoff note.",
+      "suggestedQuestion": "What requires approval and what is the response-time obligation?",
+      "documents": [
+        {
+          "id": "northstar-msa-2025",
+          "title": "Northstar Facilities Service Agreement",
+          "version": "2025 baseline",
+          "role": "baseline",
+          "type": "Agreement",
+          "clauses": [
+            {"section": "SYN", "text": "Synthetic-data notice: this fictional agreement exists only for a portfolio demonstration."},
+            {"section": "1.1", "text": "Vendor: Northstar Facilities Group provides preventive and corrective maintenance for the fictional Redwood office network."},
+            {"section": "2.1", "text": "Term: July 1, 2025 through June 30, 2026, with one optional twelve-month renewal."},
+            {"section": "3.1", "text": "Annual fee: $128,400, invoiced in equal monthly installments."},
+            {"section": "4.2", "text": "High-severity response: a qualified technician must acknowledge the incident within four business hours."},
+            {"section": "5.3", "text": "Approval threshold: change orders above $5,000 require written approval from the procurement operations manager."},
+            {"section": "7.1", "text": "Non-renewal notice: either party must provide notice at least 45 calendar days before the term ends."},
+            {"section": "8.4", "text": "Data scope: service records may contain equipment identifiers and business contact roles but no payment-card or patient data."}
+          ]
+        },
+        {
+          "id": "northstar-amendment-2026",
+          "title": "Northstar Renewal Amendment",
+          "version": "2026 proposed",
+          "role": "current",
+          "type": "Amendment",
+          "clauses": [
+            {"section": "SYN", "text": "Synthetic-data notice: this fictional amendment exists only for a portfolio demonstration."},
+            {"section": "1.1", "text": "Vendor: Northstar Facilities Group provides preventive and corrective maintenance for the fictional Redwood office network."},
+            {"section": "2.1", "text": "Term: July 1, 2026 through June 30, 2027, with one optional twelve-month renewal."},
+            {"section": "3.1", "text": "Annual fee: $136,800, invoiced in equal monthly installments."},
+            {"section": "4.2", "text": "High-severity response: a qualified technician must acknowledge the incident within two business hours."},
+            {"section": "5.3", "text": "Approval threshold: change orders above $2,500 require written approval from the procurement operations manager."},
+            {"section": "7.1", "text": "Non-renewal notice: either party must provide notice at least 60 calendar days before the term ends."},
+            {"section": "8.4", "text": "Data scope: service records may contain equipment identifiers and business contact roles but no payment-card or patient data."}
+          ]
+        },
+        {
+          "id": "northstar-handoff",
+          "title": "Renewal Handoff Note",
+          "version": "Internal review",
+          "role": "supporting",
+          "type": "Handoff",
+          "clauses": [
+            {"section": "SYN", "text": "Synthetic-data notice: this fictional handoff contains no customer or employee records."},
+            {"section": "H1", "text": "Operations requested the shorter two-hour response target after three fictional after-hours equipment failures."},
+            {"section": "H2", "text": "Finance has not approved the annual fee increase; the reviewer must record that decision before renewal."},
+            {"section": "H3", "text": "The lower change-order threshold creates more approval events and should be confirmed with the procurement operations manager."},
+            {"section": "H4", "text": "No external message or renewal action may be sent from this demonstration."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harborline-logistics",
+      "title": "Harborline warehouse support",
+      "reference": "OPS-2026-031",
+      "owner": "Warehouse operations",
+      "summary": "Warehouse device support agreement and proposed peak-season addendum.",
+      "suggestedQuestion": "Which service levels changed and when can the agreement be ended?",
+      "documents": [
+        {
+          "id": "harborline-2025",
+          "title": "Harborline Device Support Schedule",
+          "version": "2025 baseline",
+          "role": "baseline",
+          "type": "Service schedule",
+          "clauses": [
+            {"section": "SYN", "text": "Synthetic-data notice: all warehouse sites and commercial terms are fictional."},
+            {"section": "1.1", "text": "Vendor: Harborline Systems supports handheld scanners at three fictional distribution centers."},
+            {"section": "2.1", "text": "Term: October 1, 2025 through September 30, 2026, without automatic renewal."},
+            {"section": "3.1", "text": "Annual fee: $84,000, excluding replacement hardware."},
+            {"section": "4.2", "text": "High-severity response: remote support must respond within 90 minutes during staffed warehouse hours."},
+            {"section": "5.3", "text": "Approval threshold: hardware purchases above $1,500 require warehouse operations director approval."},
+            {"section": "7.1", "text": "Non-renewal notice: no notice is required because the schedule ends on its stated date."},
+            {"section": "8.4", "text": "Data scope: support logs include device identifiers, shift codes, and fictional site names."}
+          ]
+        },
+        {
+          "id": "harborline-peak-2026",
+          "title": "Harborline Peak-Season Addendum",
+          "version": "2026 proposed",
+          "role": "current",
+          "type": "Addendum",
+          "clauses": [
+            {"section": "SYN", "text": "Synthetic-data notice: all warehouse sites and commercial terms are fictional."},
+            {"section": "1.1", "text": "Vendor: Harborline Systems supports handheld scanners at three fictional distribution centers."},
+            {"section": "2.1", "text": "Term: October 1, 2026 through January 31, 2027, without automatic renewal."},
+            {"section": "3.1", "text": "Annual fee: $42,000 for the four-month peak-season period, excluding replacement hardware."},
+            {"section": "4.2", "text": "High-severity response: remote support must respond within 30 minutes at any time during the peak-season term."},
+            {"section": "5.3", "text": "Approval threshold: hardware purchases above $1,500 require warehouse operations director approval."},
+            {"section": "7.1", "text": "Non-renewal notice: either party may end the addendum with 14 calendar days written notice."},
+            {"section": "8.4", "text": "Data scope: support logs include device identifiers, shift codes, and fictional site names."}
+          ]
+        },
+        {
+          "id": "harborline-review-note",
+          "title": "Peak Coverage Review Note",
+          "version": "Internal review",
+          "role": "supporting",
+          "type": "Review note",
+          "clauses": [
+            {"section": "SYN", "text": "Synthetic-data notice: this fictional note contains no worker names or real locations."},
+            {"section": "H1", "text": "The proposed coverage becomes continuous, rather than limited to staffed warehouse hours."},
+            {"section": "H2", "text": "The reviewer should confirm whether the 14-day termination right is operationally acceptable during peak volume."},
+            {"section": "H3", "text": "No demand forecast is included in this packet, so the support level should not be treated as financially justified by the demo."}
+          ]
+        }
+      ]
+    }
+  ]
+}

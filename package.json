@@ -1,0 +1,13 @@
+{
+  "name": "doctrace-desk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first document evidence review workspace with cited answers and human verification.",
+  "scripts": {
+    "test": "node tests/analysis.test.mjs",
+    "test:browser": "node tests/browser-smoke.mjs",
+    "serve": "node tools/static-server.mjs"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DocuTrace Desk is a local-first document review workspace with cited answers, version comparison, structured extraction, and human verification.">
+  <meta name="theme-color" content="#18211f">
+  <title>DocuTrace Desk | Evidence Review Workspace</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to review workspace</a>
+  <header class="app-header">
+    <div class="brand-lockup">
+      <span class="brand-mark" aria-hidden="true">DT</span>
+      <div>
+        <p class="product-kicker">Evidence review workspace</p>
+        <h1>DocuTrace Desk</h1>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span class="mode-label"><span aria-hidden="true"></span> Synthetic local demo</span>
+      <a href="docs/CASE_STUDY.md">Case study</a>
+      <a href="https://github.com/jubjub-cpu/doctrace-desk">Repository</a>
+    </div>
+  </header>
+
+  <main id="workspace" tabindex="-1">
+    <div id="app" aria-live="polite" aria-busy="true">
+      <section class="startup-state" aria-label="Loading DocuTrace">
+        <p class="eyebrow">Preparing review desk</p>
+        <h2>Loading synthetic document packets...</h2>
+        <div class="loading-bar" aria-hidden="true"><span></span></div>
+      </section>
+    </div>
+    <noscript>
+      <section class="startup-state error-state">
+        <h2>JavaScript is required</h2>
+        <p>This browser-only review workflow needs JavaScript to search and compare the synthetic documents.</p>
+      </section>
+    </noscript>
+  </main>
+
+  <footer>
+    <p>Deterministic browser analysis. Fictional documents only. Findings require human verification and are not legal advice.</p>
+    <a href="https://jubjub-cpu.github.io/gabe-ai-product-portfolio/">Gabe's AI product portfolio</a>
+  </footer>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
