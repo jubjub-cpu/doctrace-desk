@@ -74,7 +74,7 @@ foreach ($pattern in $sensitivePatterns) {
   if ($allText -match $pattern) { $failures.Add("Potential private information or secret pattern found: $pattern") }
 }
 
-foreach ($phrase in @("synthetic", "deterministic", "human verification", "not legal advice", "AI-assisted")) {
+foreach ($phrase in @("synthetic", "deterministic", "human verification", "not legal advice")) {
   if ($allText -notmatch [Regex]::Escape($phrase)) { $failures.Add("Required disclosure phrase missing: $phrase") }
 }
 

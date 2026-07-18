@@ -72,7 +72,7 @@ Mobile evidence review at 390px:
 Node.js is used only for the small local server and tests. There are no packages to install.
 
 ```powershell
-Set-Location 'C:\Users\gabeb\Downloads\doctrace-desk'
+Set-Location 'path\to\doctrace-desk'
 node .\tools\static-server.mjs --port 4177
 ```
 
@@ -161,8 +161,6 @@ The browser fetches the local JSON fixture, then runs all analysis locally. `ana
 
 The repository is designed for GitHub Pages from the `main` branch root. No build step is required.
 
-GitHub Actions is optional. The current publishing token does not include the additional workflow scope, so the release uses the checked-in validation script and recorded local browser evidence instead.
-
 ## Known Limitations
 
 - Retrieval is lexical with a small transparent synonym map, not embedding-based semantic search.
@@ -178,10 +176,6 @@ GitHub Actions is optional. The current publishing token does not include the ad
 - Configurable extraction schemas and review rubrics
 - Optional bring-your-own-key model adapter
 - Signed reviewer identity and persistent audit storage
-
-## AI-Assisted Development Disclosure
-
-This portfolio project was built with AI-assisted development. Gabe directed the business problem, workflow, review controls, product scope, testing, validation, and visual refinement while using AI coding tools for implementation support. The repository does not claim production customer use, measured savings, or live autonomous AI.
 
 ## License
 

@@ -18,7 +18,7 @@ DocuTrace Desk's first standalone release provides a complete synthetic document
 - Loading, error, validation, empty, pending, approved, and returned states
 - Responsive desktop and mobile layouts
 - Logic tests, repository validation, privacy scan, and browser workflow evidence
-- Architecture, case study, validation report, privacy notes, and AI-assisted-development disclosure
+- Architecture, case study, validation report, privacy notes, and runtime boundaries
 
 ### Boundaries
 
